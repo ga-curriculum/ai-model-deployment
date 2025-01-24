@@ -40,13 +40,14 @@
 
 By the end of this session, you will be able to:
 
--   ✅ Understand the key challenges and considerations in deploying AI models.
--   ✅ Compare and contrast the AI/ML deployment offerings of major hyperscale cloud providers (AWS, Azure, GCP).
--   ✅ Analyze the cost and performance implications of different deployment strategies.
--   ✅ Evaluate the trade-offs between different data pipeline architectures for AI workloads.
--   ✅ Design and implement scalable and reliable AI deployment architectures.
--   ✅ Understand best practices for monitoring, maintaining, and updating deployed AI models.
--   ✅ Develop strategies for optimizing the cost and performance of AI deployments.
+- **Identify** the key challenges and considerations in deploying AI models.  
+- **Differentiate** between the AI/ML deployment offerings of major hyperscale cloud providers (AWS, Azure, GCP).  
+- **Analyze** the cost and performance implications of various deployment strategies.  
+- **Evaluate** trade-offs between different data pipeline architectures for AI workloads.  
+- **Design and create** scalable and reliable AI deployment architectures.  
+- **Apply** best practices for monitoring, maintaining, and updating deployed AI models.  
+- **Develop and optimize** strategies for cost-effective and high-performance AI deployments.  
+
 
 ## I. Introduction (5 minutes)
 
@@ -169,18 +170,13 @@ GCP offers a powerful and innovative platform for AI/ML, leveraging Google's exp
 -   **Cloud Batch:** Fully managed batch processing.
 -   **Cloud AI Platform:** (Being replaced by Vertex AI) Services for training and deploying models.
 
-**Strengths:**
+| **Strengths**                                                                 | **Weaknesses**                                                       |
+|-------------------------------------------------------------------------------|----------------------------------------------------------------------|
+| Mature and comprehensive platform.                                            | Complexity due to the sheer number of services.                      |
+| Tight integration with other AWS services.                                    | Cost optimization can be challenging.                                |
+| Large community and ecosystem.                                                | Potential for vendor lock-in.                                        |
+| Strong focus on security and compliance.                                      |                                                                      |
 
--   Cutting-edge AI research.
--   Strong in deep learning and TensorFlow.
--   Kubernetes leadership.
--   Competitive pricing.
-
-**Weaknesses:**
-
--   Less mature than AWS in some areas.
--   Documentation can be fragmented.
--   Rapidly evolving platform.
 
 **Real-world example:** A healthcare company uses Vertex AI to deploy a medical image analysis model that assists doctors in diagnosing diseases, leveraging GCP's expertise in deep learning and image processing.
 
@@ -204,13 +200,14 @@ GCP offers a powerful and innovative platform for AI/ML, leveraging Google's exp
 
 The best choice depends on:
 
--   **Existing infrastructure:** Leverage your organization's current cloud investments.
--   **Team expertise:** Choose a platform your team is familiar with.
--   **Specific use case:** Some platforms are better suited for certain AI models or applications.
--   **Scalability and performance:** Consider data volume, request frequency, and latency needs.
--   **Budget:** Compare pricing models and optimize for cost-effectiveness.
--   **Security and compliance:** Ensure the platform meets your security and compliance needs.
--   **Vendor lock-in:** Consider the ease of migrating to another platform.
+- 🏗️ **Existing infrastructure:** Leverage your organization's current cloud investments.
+- 👩‍💻 **Team expertise:** Choose a platform your team is familiar with.
+- 🎯 **Specific use case:** Some platforms are better suited for certain AI models or applications.
+- 📈 **Scalability and performance:** Consider data volume, request frequency, and latency needs.
+- 💰 **Budget:** Compare pricing models and optimize for cost-effectiveness.
+- 🔒 **Security and compliance:** Ensure the platform meets your security and compliance needs.
+- 🔄 **Vendor lock-in:** Consider the ease of migrating to another platform.
+
 
 **It's often beneficial to experiment with multiple hyperscalers before making a long-term commitment.** Now that we have evaluated the vendors, let's move on to analyzing the associated costs.
 
@@ -222,42 +219,45 @@ Efficient and cost-effective data pipelines are crucial for successful AI deploy
 
 ### A. Data Pipeline Architectures for AI
 
-1.  **Traditional ETL (Extract, Transform, Load):**
-    -   Data is extracted, transformed, and loaded into a target system (e.g., data warehouse).
-    -   Suitable for structured data and batch processing.
-    -   **Example:** AWS Glue to extract data from an on-premise database, transform it using Spark, and load it into Amazon Redshift.
-    -   **Cost:** Can be cost-effective for smaller datasets but may become expensive as data volume grows.
-    -   **Performance:** Depends on the ETL engine and the size of the dataset.
+### Data Pipeline Architectures: A Dynamic Perspective
 
-2.  **ELT (Extract, Load, Transform):**
-    -   Data is extracted and loaded into a target system in its raw format. Transformations are performed within the target system.
-    -   Suitable for large datasets and cloud-based data warehouses.
-    -   **Example:** Azure Data Factory to extract data and load it into Azure Synapse Analytics, where transformations are performed using SQL or Spark.
-    -   **Cost:** Can be more cost-effective than ETL for large datasets.
-    -   **Performance:** Generally faster than ETL for large datasets.
+1. 🚀 **Traditional ETL (Extract, Transform, Load):**
+   - 🛠️ **Workflow:** Data is extracted, transformed, and then loaded into a target system like a data warehouse.
+   - 📊 **Best for:** Structured data and batch processing scenarios.
+   - 🌟 **Example:** Using AWS Glue to extract on-premise data, transform it via Spark, and load it into Amazon Redshift.
+   - 💰 **Cost:** Ideal for smaller datasets but can become expensive as data volume scales.
+   - ⚡ **Performance:** Performance depends on the ETL engine and dataset size.
 
-3.  **Streaming Pipelines:**
-    -   Data is processed in real-time as it is generated.
-    -   Suitable for applications that require immediate insights.
-    -   **Example:** Kafka to ingest clickstream data, Flink for stream processing, and then storing results in a NoSQL database.
-    -   **Cost:** Varies based on data volume and processing complexity.
-    -   **Performance:** Designed for low-latency processing and high throughput.
+2. 🌐 **ELT (Extract, Load, Transform):**
+   - 🛠️ **Workflow:** Data is extracted and loaded in its raw form into a target system, where transformations are later applied.
+   - 📊 **Best for:** Handling large datasets in cloud-based data warehouses.
+   - 🌟 **Example:** Azure Data Factory extracting data and loading it into Azure Synapse Analytics, followed by transformations using SQL or Spark.
+   - 💰 **Cost:** Typically more cost-efficient for large datasets compared to ETL.
+   - ⚡ **Performance:** Outperforms ETL for larger data volumes by leveraging modern cloud infrastructure.
 
-4.  **Lambda Architecture:**
-    -   Combines batch and streaming processing for historical and real-time views.
-    -   **Batch Layer:** Processes historical data.
-    -   **Speed Layer:** Processes real-time data.
-    -   **Serving Layer:** Merges results for a unified view.
-    -   **Example:** Hadoop/Spark for batch, Kafka and Spark Streaming for speed, and BigQuery for serving.
-    -   **Cost:** Can be expensive due to managing two pipelines.
-    -   **Performance:** Provides both historical and real-time insights.
+3. ⏱️ **Streaming Pipelines:**
+   - 🛠️ **Workflow:** Processes data in real-time as it's generated, delivering near-instant insights.
+   - 📊 **Best for:** Applications demanding immediate analytics or alerts.
+   - 🌟 **Example:** Kafka for clickstream ingestion, Flink for real-time processing, with results stored in a NoSQL database.
+   - 💰 **Cost:** Depends on data volume and real-time processing complexity.
+   - ⚡ **Performance:** Built for ultra-low latency and high throughput.
 
-5.  **Kappa Architecture:**
-    -   Simplified Lambda, using a single stream processing pipeline for real-time and historical data.
-    -   Relies on a platform that can replay historical data (e.g., Kafka).
-    -   **Example:** Kafka for data ingestion and stream processing, and a data lake for storage.
-    -   **Cost:** Can be more cost-effective than Lambda.
-    -   **Performance:** Similar to streaming pipelines, but handles historical data.
+4. 🔄 **Lambda Architecture:**
+   - 🛠️ **Workflow:** Blends batch and real-time processing to deliver historical and live data insights.
+      - **Batch Layer:** Processes large historical datasets.
+      - **Speed Layer:** Handles real-time, low-latency data.
+      - **Serving Layer:** Combines outputs for a holistic view.
+   - 🌟 **Example:** Hadoop/Spark for batch, Kafka + Spark Streaming for real-time, and BigQuery for unified results.
+   - 💰 **Cost:** Managing two parallel pipelines increases complexity and expense.
+   - ⚡ **Performance:** Balances historical context with real-time agility for comprehensive insights.
+
+5. ⚡ **Kappa Architecture:**
+   - 🛠️ **Workflow:** Streamlined version of Lambda with a single pipeline for real-time and historical data using platforms that support data replay.
+   - 📊 **Best for:** Simplifying architectures while preserving real-time and historical capabilities.
+   - 🌟 **Example:** Kafka for ingesting and replaying data, with a data lake for storage and long-term analysis.
+   - 💰 **Cost:** More cost-effective and simpler to maintain compared to Lambda.
+   - ⚡ **Performance:** Delivers real-time insights with streamlined management of historical data.
+
 
 **Discussion Prompt:** Which data pipeline architecture is best suited for different types of AI projects? What are the trade-offs between them?
 
@@ -265,35 +265,38 @@ Efficient and cost-effective data pipelines are crucial for successful AI deploy
 
 When building data pipelines on hyperscale platforms, consider these cost factors:
 
-1.  **Compute Costs:**
-    -   **Virtual Machines (VMs):** Cost depends on instance type, OS, and usage.
-    -   **Containers:** Costs depend on the orchestration service and resources used.
-    -   **Serverless:** Costs based on invocations, execution time, and memory.
-    -   **Data Processing Frameworks:** Costs for managed services or running Spark/Hadoop clusters.
+### Cloud Cost Categories: A Practical Breakdown
 
-2.  **Storage Costs:**
-    -   **Object Storage:** Cost depends on data stored, storage class, and retrieval frequency.
-    -   **Data Warehouses:** Costs depend on storage, compute resources, and query usage.
-    -   **Databases:** Costs vary based on type, instance size, storage, and usage.
+1. 💻 **Compute Costs:**
+   - **Virtual Machines (VMs):** Pricing varies based on instance type, operating system, and usage duration.
+   - **Containers:** Costs depend on the orchestration platform (e.g., Kubernetes) and resource allocation.
+   - **Serverless:** Charged by the number of invocations, execution time, and memory usage.
+   - **Data Processing Frameworks:** Costs apply to managed services or self-managed Spark/Hadoop clusters.
 
-3.  **Data Transfer Costs:**
-    -   **Ingress (data into the cloud):** Often free or low cost.
-    -   **Egress (data out of the cloud):** Can be significant.
-    -   **Inter-region data transfer:** Transferring data between regions incurs costs.
+2. 📦 **Storage Costs:**
+   - **Object Storage:** Charges based on data volume, storage tier (e.g., standard, cold), and retrieval patterns.
+   - **Data Warehouses:** Pricing depends on storage requirements, query execution, and compute resources.
+   - **Databases:** Costs vary depending on the type (e.g., relational, NoSQL), instance size, storage, and usage.
 
-4.  **Networking Costs:**
-    -   **VPC components:** Costs for VPN gateways, NAT gateways, etc.
-    -   **Load Balancers:** Costs for distributing traffic.
+3. 🌐 **Data Transfer Costs:**
+   - **Ingress (data into the cloud):** Usually free or low-cost.
+   - **Egress (data out of the cloud):** Can be significant, especially for large volumes.
+   - **Inter-region Transfers:** Moving data between cloud regions incurs additional charges.
 
-5.  **Managed Service Costs:**
-    -   **ETL/ELT Services:** Costs based on usage (e.g., DPUs used, job duration).
-    -   **Streaming Services:** Costs based on data volume ingested and processed.
-    -   **Orchestration Services:** Costs depend on the service and usage.
+4. 📡 **Networking Costs:**
+   - **VPC Components:** Costs for using VPN gateways, NAT gateways, and other virtual private cloud elements.
+   - **Load Balancers:** Expenses related to traffic distribution across servers.
 
-6.  **Other Costs:**
-    -   **Monitoring and Logging:** Costs for collecting, storing, and analyzing logs.
-    -   **Security Services:** Costs for key management, IAM, and security auditing.
-    -   **Support Costs:** Costs for technical support.
+5. ⚙️ **Managed Service Costs:**
+   - **ETL/ELT Services:** Charged based on resources used (e.g., DPUs or job duration).
+   - **Streaming Services:** Costs depend on data ingestion and processing volume.
+   - **Orchestration Services:** Pricing reflects the service and usage patterns.
+
+6. 🔒 **Other Costs:**
+   - **Monitoring and Logging:** Fees for storing and analyzing logs and metrics.
+   - **Security Services:** Charges for key management, identity and access management (IAM), and security audits.
+   - **Support Costs:** Costs incurred for accessing technical support tiers.
+
 
 ### C. Performance Considerations and Optimization
 
@@ -333,49 +336,19 @@ Optimizing performance is crucial for minimizing latency, maximizing throughput,
 
 Here are strategies for optimizing the cost of your data pipelines:
 
-1.  **Right-sizing Resources:**
-    -   Choose appropriate instance types.
-    -   Use auto-scaling.
-    -   Monitor utilization and adjust sizes.
+| **Cost Optimization Strategy**                     | **Details**                                                                                                  |
+|----------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| **Right-sizing Resources**                        | - Select appropriate instance types.<br>- Use auto-scaling to adjust capacity dynamically.<br>- Monitor utilization and resize as needed. |
+| **Leveraging Serverless**                         | - Ideal for infrequent or short-lived tasks.<br>- Consider serverless containers for flexible compute needs. |
+| **Spot Instances / Low-Priority / Preemptible VMs**| - Use discounted instances for fault-tolerant workloads.<br>- Employ checkpointing to save progress on interruptions. |
+| **Reserved Instances or Committed Use Discounts** | - Commit to resource usage for significant discounts.<br>- Best for predictable workloads.                  |
+| **Storage Optimization**                          | - Select appropriate storage classes (e.g., standard, cold, archival).<br>- Use lifecycle policies to archive or delete unused data.<br>- Compress data to save space. |
+| **Data Transfer Optimization**                    | - Minimize egress charges by keeping data in-region.<br>- Compress data before transfer.<br>- Use caching to reduce data movement.<br>- Leverage tools like AWS DataSync or Azure Data Box for efficient transfer. |
+| **Monitoring and Alerting**                       | - Set up cost dashboards and alerts.<br>- Use tools like AWS Cost Explorer, Azure Cost Management, or Google Cloud Billing for insights. |
+| **Tagging Resources**                             | - Apply tags to resources for tracking costs by project, department, or application.                        |
+| **Choosing the Right Region**                     | - Opt for regions near users or data sources.<br>- Compare pricing across regions to find cost-efficient options. |
+| **Shutting Down Unused Resources**                | - Terminate idle resources.<br>- Automate shutdowns during off-hours to avoid unnecessary costs.            |
 
-2.  **Leveraging Serverless:**
-    -   Use serverless for infrequent, short-lived tasks.
-    -   Consider serverless containers.
-
-3.  **Spot Instances (AWS), Low-Priority VMs (Azure), Preemptible VMs (GCP):**
-    -   Use discounted instances for fault-tolerant workloads.
-    -   Implement checkpointing.
-
-4.  **Reserved Instances or Committed Use Discounts:**
-    -   Commit to resource usage for discounts.
-    -   Suitable for predictable workloads.
-
-5.  **Storage Optimization:**
-    -   Use appropriate storage classes.
-    -   Implement lifecycle policies.
-    -   Delete or archive unneeded data.
-    -   Compress data.
-
-6.  **Data Transfer Optimization:**
-    -   Minimize egress.
-    -   Compress data.
-    -   Use caching.
-    -   Consider services like AWS DataSync or Azure Data Box.
-
-7.  **Monitoring and Alerting:**
-    -   Set up cost dashboards and alerts.
-    -   Use tools like AWS Cost Explorer, Azure Cost Management, or Google Cloud Billing.
-
-8.  **Tagging Resources:**
-    -   Tag resources for cost tracking by project, department, or application.
-
-9.  **Choosing the Right Region:**
-    -   Select a region close to users or data sources.
-    -   Be aware of pricing variations.
-
-10. **Shutting Down Unused Resources:**
-    -   Terminate idle resources.
-    -   Automate shutdowns during off-hours.
 
 **Discussion Prompt:** Which of these cost optimization strategies are most applicable to your organization? How would you prioritize them? Now that we understand cost and performance factors, let's move on to designing the architecture.
 
@@ -385,32 +358,13 @@ Let's dive into architectural patterns and best practices for deploying AI model
 
 ### A. Deployment Patterns
 
-1.  **Model-as-a-Service (MaaS):**
-    -   Deploy the model as a REST API endpoint.
-    -   Commonly used for real-time inference.
-    -   **Example:** Using Flask or FastAPI to create a REST API that wraps a machine learning model. Deploying this API on a server or using a managed service like SageMaker Hosting or Azure Machine Learning managed endpoints.
-    -   **Advantages:** Easy integration, scalable, supports real-time predictions.
-    -   **Disadvantages:** Can have higher latency, requires managing API infrastructure.
+| **Deployment Method**       | **Description**                                                                                         | **Advantages**                                                             | **Disadvantages**                                                |
+|-----------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|------------------------------------------------------------------|
+| **Model-as-a-Service (MaaS)** | - Deploy the model as a REST API endpoint.<br>- Commonly used for real-time inference.<br>**Example:** Using Flask, FastAPI, or managed services like SageMaker Hosting. | - Easy integration.<br>- Scalable.<br>- Supports real-time predictions.   | - Higher latency.<br>- Requires managing API infrastructure.     |
+| **Batch Prediction**        | - Generate predictions on a large dataset in batches.<br>- Suitable when real-time inference isn't required.<br>**Example:** SageMaker Batch Transform or Spark for batch inference. | - Efficient for large datasets.<br>- Lower cost for some use cases.<br>- Simpler infrastructure. | - Not for real-time predictions.<br>- Delayed results.           |
+| **Embedded Model**          | - Embed the model directly into an application or device.<br>- Suitable for offline or low-latency environments.<br>**Example:** Embedding models in mobile apps or IoT devices. | - Low latency.<br>- Operates offline.<br>- Reduced data transfer costs.   | - Difficult to update.<br>- Limited by device resources.<br>- May require optimization. |
+| **Streaming Model**         | - Process data and generate predictions in real-time.<br>- Ideal for fraud detection, real-time recommendations, and sensor analysis.<br>**Example:** Kafka Streams or Spark Streaming for predictions. | - Low latency.<br>- Enables real-time insights.                           | - Complex to implement.<br>- Requires robust streaming infrastructure. |
 
-2.  **Batch Prediction:**
-    -   Generate predictions on a large dataset in batches.
-    -   Suitable when predictions are not needed in real-time.
-    -   **Example:** Using Spark to generate predictions on a large dataset stored in a data lake and storing the results in a database. Using SageMaker Batch Transform or Azure Machine Learning pipelines for batch inference.
-    -   **Advantages:** Efficient for large datasets, lower cost for some use cases, simpler infrastructure.
-    -   **Disadvantages:** Not for real-time, predictions are not immediate.
-
-3.  **Embedded Model:**
-    -   Embed the model directly into an application or device.
-    -   Suitable for low latency or offline environments.
-    -   **Example:** Embedding a model in a mobile app or an IoT device for image recognition.
-    -   **Advantages:** Low latency, can operate offline, reduced data transfer costs.
-    -   **Disadvantages:** Difficult to update, limited by device resources, may require model optimization.
-
-4.  **Streaming Model:**
-    -   Process data and generate predictions in real-time as data streams in.
-    -   Suitable for fraud detection, real-time recommendations, and sensor data analysis.
-    -   **Example:** Using Kafka Streams or Spark Streaming to process data, apply a model, and generate predictions.
-    -   **Advantages:** Low latency, enables real-time insights.
     -   **Disadvantages:** Complex to implement, requires robust streaming infrastructure.
 
 **Discussion Prompt:** What are the trade-offs between these deployment patterns? Which are most suitable for different AI applications?
@@ -473,41 +427,40 @@ Let's dive into architectural patterns and best practices for deploying AI model
 
 ### D. Monitoring and Updating Deployed Models
 
-1.  **Model Monitoring:**
-    -   Continuously track performance using relevant metrics (accuracy, precision, recall, F1-score, latency, error rate).
-    -   Monitor for **data drift** (changes in input data) and **concept drift** (changes in the relationship between input and output).
-    -   Use tools like SageMaker Model Monitor, Azure ML monitoring, or Vertex AI Monitoring.
-    -   Set up alerts for performance drops or drift.
+### Engaging Model Management Practices 🚀
 
-2.  **Model Retraining:**
-    -   Periodically retrain models with new data.
-    -   Automate retraining using pipelines.
-    -   Use **online learning** to continuously update models.
-    -   Implement **champion/challenger** approaches.
+1. **Model Monitoring 🔍**  
+   - Continuously track key performance metrics (accuracy, precision, recall, latency).  
+   - Detect **data drift** (changes in input data patterns) and **concept drift** (changes in input-output relationships).  
+   - Tools: SageMaker Model Monitor, Azure ML Monitoring, Vertex AI Monitoring.  
+   - Proactive alerts for performance issues or drift keep models optimized.
 
-3.  **Model Versioning:**
-    -   Track model versions, including training data, hyperparameters, and metrics.
-    -   Use a model registry (SageMaker Model Registry, Azure ML registry, MLflow).
-    -   Enables reproducibility, rollback, and comparison.
+2. **Model Retraining 🔄**  
+   - Refresh models periodically with new data for enhanced relevance.  
+   - Leverage **automated pipelines** to streamline retraining.  
+   - Explore **online learning** for continuous updates or use **champion/challenger** setups to test alternatives.
 
-4.  **A/B Testing:**
-    -   Compare different models or versions in a live environment.
-    -   Route a portion of traffic to each model.
-    -   Use statistical methods to determine the best performer.
-    -   Gradually roll out the winning model.
+3. **Model Versioning 🗂️**  
+   - Manage models with versioning tools, tracking training data, hyperparameters, and results.  
+   - Tools: SageMaker Model Registry, Azure ML Registry, MLflow.  
+   - Ensure reproducibility, enable easy rollbacks, and compare model iterations seamlessly.
 
-5.  **Blue/Green Deployments:**
-    -   Maintain two identical environments: one for the current model (blue) and one for the new model (green).
-    -   Deploy the new model to green and test it.
-    -   Switch traffic from blue to green.
-    -   Minimizes downtime and allows for quick rollback.
+4. **A/B Testing ⚖️**  
+   - Experiment with different models or versions in a live setting.  
+   - Split traffic between models to identify the optimal performer.  
+   - Gradually roll out the superior model after statistical validation.
 
-6.  **Canary Deployments:**
-    -   Gradually roll out a new model to a small subset of users (the "canary").
-    -   Monitor performance and compare it to the existing model.
-    -   Increase traffic to the new model if it performs well.
-    -   Roll back if issues are detected.
-    -   Minimizes risk.
+5. **Blue/Green Deployments 🟦🟩**  
+   - Use two identical environments: **blue** for the current model and **green** for the new one.  
+   - Test the new model in **green**, then switch traffic if results are positive.  
+   - Guarantees minimal downtime and allows instant rollback if needed.
+
+6. **Canary Deployments 🐦**  
+   - Introduce the new model to a small, targeted user group (the "canary").  
+   - Closely monitor its performance against the existing model.  
+   - Gradually scale up if successful or roll back to mitigate risk.  
+   - Combines safety with incremental adoption.
+
 
 ### E. Security Considerations for AI Deployment
 
@@ -549,6 +502,29 @@ Let's dive into architectural patterns and best practices for deploying AI model
     -   Implement data governance policies.
 
 **Discussion Prompt:** What are some unique security challenges of deploying AI models compared to traditional software?
+
+### **Scenario-Based Activity: Deploying AI for Shop Smart**  
+
+**Scenario:**  
+Shop Smart, a large retail chain, wants to deploy an AI-powered recommendation engine to improve customer experience and boost sales. The recommendation engine has been trained on customer purchase history, browsing behavior, and demographic data. However, the team is now faced with challenges related to deployment, scalability, and cost management.  
+
+As consultants for Shop Smart, your task is to guide them through deployment strategies while addressing critical business and technical considerations.
+
+---
+
+### **Discussion Activity Questions**
+
+1. **Deployment Patterns:**  
+   Shop Smart is considering real-time recommendations during checkout (e.g., “Customers who bought this also bought”). Which deployment pattern—Model-as-a-Service, Batch Prediction, or Streaming Model—would you recommend for this use case? What trade-offs should they consider in terms of latency, cost, and complexity?  
+
+2. **Cost Optimization Strategies:**  
+   Shop Smart is concerned about rising cloud costs as they scale the recommendation engine across multiple regions. What cost optimization strategies (e.g., using reserved instances, minimizing egress charges, leveraging serverless architectures) would you prioritize to keep costs under control while maintaining performance?
+
+3. **Scalability Considerations:**  
+   During holiday sales, customer traffic spikes dramatically. How would you ensure that the AI recommendation engine scales effectively to handle the increased load without crashing or slowing down? Would you prioritize horizontal scaling, auto-scaling, or caching strategies?
+
+4. **Monitoring and Security:**  
+   Shop Smart’s leadership is worried about the security of customer data and the risk of model performance degrading over time. What steps would you take to ensure robust security (e.g., encryption, access control) and ongoing monitoring (e.g., data drift detection, A/B testing) of the deployed model?
 
 ## V. Conclusion and Best Practices (5 minutes)
 
