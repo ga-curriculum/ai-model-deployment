@@ -40,14 +40,13 @@
 
 By the end of this session, you will be able to:
 
-- **Identify** the key challenges and considerations in deploying AI models.  
-- **Differentiate** between the AI/ML deployment offerings of major hyperscale cloud providers (AWS, Azure, GCP).  
-- **Analyze** the cost and performance implications of various deployment strategies.  
-- **Evaluate** trade-offs between different data pipeline architectures for AI workloads.  
-- **Design and create** scalable and reliable AI deployment architectures.  
-- **Apply** best practices for monitoring, maintaining, and updating deployed AI models.  
-- **Develop and optimize** strategies for cost-effective and high-performance AI deployments.  
-
+- **Identify** the key challenges and considerations in deploying AI models.
+- **Differentiate** between the AI/ML deployment offerings of major hyperscale cloud providers (AWS, Azure, GCP).
+- **Analyze** the cost and performance implications of various deployment strategies.
+- **Evaluate** trade-offs between different data pipeline architectures for AI workloads.
+- **Design and create** scalable and reliable AI deployment architectures.
+- **Apply** best practices for monitoring, maintaining, and updating deployed AI models.
+- **Develop and optimize** strategies for cost-effective and high-performance AI deployments.
 
 ## I. Introduction (5 minutes)
 
@@ -171,30 +170,31 @@ GCP offers a powerful and innovative platform for AI/ML, leveraging Google's exp
 -   **Cloud AI Platform:** (Being replaced by Vertex AI) Services for training and deploying models.
 
 | **Strengths**                                                                 | **Weaknesses**                                                       |
-|-------------------------------------------------------------------------------|----------------------------------------------------------------------|
-| Mature and comprehensive platform.                                            | Complexity due to the sheer number of services.                      |
-| Tight integration with other AWS services.                                    | Cost optimization can be challenging.                                |
-| Large community and ecosystem.                                                | Potential for vendor lock-in.                                        |
-| Strong focus on security and compliance.                                      |                                                                      |
-
+| :---------------------------------------------------------------------------- | :------------------------------------------------------------------- |
+| Cutting-edge AI research and development from Google.                        | The platform is evolving rapidly, which can lead to some instability. |
+| Strong in deep learning and Kubernetes.                                     | Documentation can sometimes be out of date.                           |
+| Competitive pricing, especially for sustained use.                          |                                                                      |
+| Excellent integration with open-source tools.                                |                                                                      |
 
 **Real-world example:** A healthcare company uses Vertex AI to deploy a medical image analysis model that assists doctors in diagnosing diseases, leveraging GCP's expertise in deep learning and image processing.
 
 ### D. Feature Comparison Table
 
-| Feature                       | AWS                               | Azure                                  | GCP                                    |
-| :---------------------------- | :-------------------------------- | :------------------------------------- | :------------------------------------- |
-| **Managed ML Platform**        | SageMaker                         | Azure Machine Learning                 | Vertex AI                               |
-| **AutoML**                     | SageMaker Autopilot               | Automated ML                           | Vertex AI AutoML                        |
-| **Visual ML Interface**        | SageMaker Studio (limited)        | Azure Machine Learning Designer        | Vertex AI Pipelines, Cloud AI Platform Pipelines |
-| **Model Deployment**           | SageMaker Hosting, Batch Transform | Managed Endpoints, Batch Endpoints      | Vertex AI Prediction                   |
-| **Serverless Compute**          | Lambda, Fargate                   | Functions, Container Instances         | Cloud Functions, Cloud Run              |
-| **Container Orchestration**   | ECS, EKS                          | AKS                                    | GKE                                    |
-| **Deep Learning Frameworks**   | TensorFlow, PyTorch, MXNet, etc. | TensorFlow, PyTorch, Scikit-learn, etc. | TensorFlow, PyTorch, Scikit-learn, etc. |
-| **Pre-trained Models/APIs**   | Comprehend, Rekognition, etc.     | Cognitive Services                     | Cloud Vision API, Natural Language API, etc. |
-| **Hardware Optimization**       | SageMaker Neo                     | -                                      | -                                      |
+| Feature                       | AWS                                         | Azure                                            | GCP                                                 |
+| :---------------------------- | :------------------------------------------ | :----------------------------------------------- | :-------------------------------------------------- |
+| **Managed ML Platform**        | SageMaker                                   | Azure Machine Learning                           | Vertex AI                                          |
+| **AutoML**                     | SageMaker Autopilot                         | Automated ML                                     | Vertex AI AutoML                                   |
+| **Visual ML Interface**        | SageMaker Studio (limited)                  | Azure Machine Learning Designer                  | Vertex AI Pipelines, Cloud AI Platform Pipelines      |
+| **Model Deployment**           | SageMaker Hosting, Batch Transform         | Managed Endpoints, Batch Endpoints                | Vertex AI Prediction                              |
+| **Serverless Compute**          | Lambda, Fargate                             | Functions, Container Instances                   | Cloud Functions, Cloud Run                         |
+| **Container Orchestration**   | ECS, EKS                                    | AKS                                              | GKE                                                 |
+| **Pre-trained Models/APIs**   | Comprehend, Rekognition, etc.               | Cognitive Services                               | Cloud Vision API, Natural Language API, etc.      |
+| **Data Warehouse**             | Redshift                                    | Azure Synapse Analytics                          | BigQuery                                            |
+| **Data Lake**                  | S3 with Glue, Athena, Lake Formation       | Azure Data Lake Storage Gen2                     | Cloud Storage with Dataproc, Dataflow              |
+| **SQL Database**               | RDS, Aurora                                | Azure SQL Database, Azure Database for PostgreSQL | Cloud SQL, Cloud Spanner                            |
+| **NoSQL Database**             | DynamoDB, DocumentDB, Neptune                | Cosmos DB                                        | Cloud Firestore, Cloud Bigtable, Cloud Memorystore |
 
-**Note:** This is a simplified comparison. Each platform offers many more features.
+**Note:** This is a simplified comparison. Each platform offers many more features, and the landscape is constantly evolving.
 
 ### E. Choosing the Right Hyperscaler
 
@@ -207,7 +207,6 @@ The best choice depends on:
 - 💰 **Budget:** Compare pricing models and optimize for cost-effectiveness.
 - 🔒 **Security and compliance:** Ensure the platform meets your security and compliance needs.
 - 🔄 **Vendor lock-in:** Consider the ease of migrating to another platform.
-
 
 **It's often beneficial to experiment with multiple hyperscalers before making a long-term commitment.** Now that we have evaluated the vendors, let's move on to analyzing the associated costs.
 
@@ -258,7 +257,6 @@ Efficient and cost-effective data pipelines are crucial for successful AI deploy
    - 💰 **Cost:** More cost-effective and simpler to maintain compared to Lambda.
    - ⚡ **Performance:** Delivers real-time insights with streamlined management of historical data.
 
-
 **Discussion Prompt:** Which data pipeline architecture is best suited for different types of AI projects? What are the trade-offs between them?
 
 ### B. Cost Factors to Consider
@@ -296,7 +294,6 @@ When building data pipelines on hyperscale platforms, consider these cost factor
    - **Monitoring and Logging:** Fees for storing and analyzing logs and metrics.
    - **Security Services:** Charges for key management, identity and access management (IAM), and security audits.
    - **Support Costs:** Costs incurred for accessing technical support tiers.
-
 
 ### C. Performance Considerations and Optimization
 
@@ -337,7 +334,7 @@ Optimizing performance is crucial for minimizing latency, maximizing throughput,
 Here are strategies for optimizing the cost of your data pipelines:
 
 | **Cost Optimization Strategy**                     | **Details**                                                                                                  |
-|----------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| :------------------------------------------------- | :----------------------------------------------------------------------------------------------------------- |
 | **Right-sizing Resources**                        | - Select appropriate instance types.<br>- Use auto-scaling to adjust capacity dynamically.<br>- Monitor utilization and resize as needed. |
 | **Leveraging Serverless**                         | - Ideal for infrequent or short-lived tasks.<br>- Consider serverless containers for flexible compute needs. |
 | **Spot Instances / Low-Priority / Preemptible VMs**| - Use discounted instances for fault-tolerant workloads.<br>- Employ checkpointing to save progress on interruptions. |
@@ -349,7 +346,6 @@ Here are strategies for optimizing the cost of your data pipelines:
 | **Choosing the Right Region**                     | - Opt for regions near users or data sources.<br>- Compare pricing across regions to find cost-efficient options. |
 | **Shutting Down Unused Resources**                | - Terminate idle resources.<br>- Automate shutdowns during off-hours to avoid unnecessary costs.            |
 
-
 **Discussion Prompt:** Which of these cost optimization strategies are most applicable to your organization? How would you prioritize them? Now that we understand cost and performance factors, let's move on to designing the architecture.
 
 ## IV. Strategies for Scalable AI Deployment (20 minutes)
@@ -359,7 +355,7 @@ Let's dive into architectural patterns and best practices for deploying AI model
 ### A. Deployment Patterns
 
 | **Deployment Method**       | **Description**                                                                                         | **Advantages**                                                             | **Disadvantages**                                                |
-|-----------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|------------------------------------------------------------------|
+| :-------------------------- | :------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------- | :--------------------------------------------------------------- |
 | **Model-as-a-Service (MaaS)** | - Deploy the model as a REST API endpoint.<br>- Commonly used for real-time inference.<br>**Example:** Using Flask, FastAPI, or managed services like SageMaker Hosting. | - Easy integration.<br>- Scalable.<br>- Supports real-time predictions.   | - Higher latency.<br>- Requires managing API infrastructure.     |
 | **Batch Prediction**        | - Generate predictions on a large dataset in batches.<br>- Suitable when real-time inference isn't required.<br>**Example:** SageMaker Batch Transform or Spark for batch inference. | - Efficient for large datasets.<br>- Lower cost for some use cases.<br>- Simpler infrastructure. | - Not for real-time predictions.<br>- Delayed results.           |
 | **Embedded Model**          | - Embed the model directly into an application or device.<br>- Suitable for offline or low-latency environments.<br>**Example:** Embedding models in mobile apps or IoT devices. | - Low latency.<br>- Operates offline.<br>- Reduced data transfer costs.   | - Difficult to update.<br>- Limited by device resources.<br>- May require optimization. |
@@ -429,38 +425,54 @@ Let's dive into architectural patterns and best practices for deploying AI model
 
 ### Engaging Model Management Practices 🚀
 
-1. **Model Monitoring 🔍**  
-   - Continuously track key performance metrics (accuracy, precision, recall, latency).  
-   - Detect **data drift** (changes in input data patterns) and **concept drift** (changes in input-output relationships).  
-   - Tools: SageMaker Model Monitor, Azure ML Monitoring, Vertex AI Monitoring.  
-   - Proactive alerts for performance issues or drift keep models optimized.
+1. **Model Monitoring 🔍**
+   - Continuously track key performance metrics. Although accuracy, precision, recall might seem relevant, they are difficult to calculate in a live environment without ground truth. Instead, focus on:
+      - **Input Data Distribution:** Monitor the distribution of features in the incoming data. Use statistical tests or visualization techniques to compare the current distribution with the training data distribution.
+      - **Prediction Distribution:** Track the distribution of model's output (e.g., predicted probabilities, class labels). Shifts in this distribution can indicate potential issues.
+      - **Business KPIs:** Monitor relevant business metrics that are impacted by the model's predictions (e.g., conversion rate, click-through rate, sales).
+      - **Error Rates:** If possible (e.g., in scenarios with delayed feedback), monitor error rates over time.
+      - **Latency:** Track the time taken to generate predictions.
+      - **Throughput:** Monitor the number of requests processed per unit of time.
+      - **Resource Utilization:** Keep an eye on CPU, memory, and other resource usage.
+   - Detect **data drift** and **concept drift**:
+      - **Data Drift:** Changes in the input data distribution over time. This means the data the model is seeing in production is different from the data it was trained on.
+        - **Detection Methods:**
+          - **Statistical Tests:** Use statistical tests like Kolmogorov-Smirnov test, Chi-Squared test, or Population Stability Index (PSI) to compare feature distributions between training and current data.
+          - **Drift Detection Algorithms:** Employ specialized algorithms like DDM (Drift Detection Method), EDDM (Early Drift Detection Method), or ADWIN (Adaptive Windowing) that are designed to detect changes in data streams.
+          - **Visualization:** Plot feature distributions over time to visually identify shifts.
+      - **Concept Drift:** Changes in the relationship between the input data and the target variable. The underlying concept the model has learned no longer holds true.
+        - **Detection Methods:**
+          - **Error Rate Monitoring:** Track the model's error rate over time. A significant increase can indicate concept drift.
+          - **Performance on a Sliding Window:** Evaluate the model's performance on recent data (sliding window) and compare it to its performance on the training data.
+          - **Adversarial Validation:** Train a separate classifier to distinguish between training data and current data. If the classifier can easily separate the two, it suggests concept drift.
+      - **Tools:** SageMaker Model Monitor, Azure ML Monitoring, Vertex AI Monitoring.
+      - Proactive alerts for performance issues or drift keep models optimized.
 
-2. **Model Retraining 🔄**  
-   - Refresh models periodically with new data for enhanced relevance.  
-   - Leverage **automated pipelines** to streamline retraining.  
+2. **Model Retraining 🔄**
+   - Refresh models periodically with new data for enhanced relevance.
+   - Leverage **automated pipelines** to streamline retraining.
    - Explore **online learning** for continuous updates or use **champion/challenger** setups to test alternatives.
 
-3. **Model Versioning 🗂️**  
-   - Manage models with versioning tools, tracking training data, hyperparameters, and results.  
-   - Tools: SageMaker Model Registry, Azure ML Registry, MLflow.  
+3. **Model Versioning 🗂️**
+   - Manage models with versioning tools, tracking training data, hyperparameters, and results.
+   - Tools: SageMaker Model Registry, Azure ML Registry, MLflow.
    - Ensure reproducibility, enable easy rollbacks, and compare model iterations seamlessly.
 
-4. **A/B Testing ⚖️**  
-   - Experiment with different models or versions in a live setting.  
-   - Split traffic between models to identify the optimal performer.  
+4. **A/B Testing ⚖️**
+   - Experiment with different models or versions in a live setting.
+   - Split traffic between models to identify the optimal performer.
    - Gradually roll out the superior model after statistical validation.
 
-5. **Blue/Green Deployments 🟦🟩**  
-   - Use two identical environments: **blue** for the current model and **green** for the new one.  
-   - Test the new model in **green**, then switch traffic if results are positive.  
+5. **Blue/Green Deployments 🟦🟩**
+   - Use two identical environments: **blue** for the current model and **green** for the new one.
+   - Test the new model in **green**, then switch traffic if results are positive.
    - Guarantees minimal downtime and allows instant rollback if needed.
 
-6. **Canary Deployments 🐦**  
-   - Introduce the new model to a small, targeted user group (the "canary").  
-   - Closely monitor its performance against the existing model.  
-   - Gradually scale up if successful or roll back to mitigate risk.  
+6. **Canary Deployments 🐦**
+   - Introduce the new model to a small, targeted user group (the "canary").
+   - Closely monitor its performance against the existing model.
+   - Gradually scale up if successful or roll back to mitigate risk.
    - Combines safety with incremental adoption.
-
 
 ### E. Security Considerations for AI Deployment
 
@@ -503,10 +515,10 @@ Let's dive into architectural patterns and best practices for deploying AI model
 
 **Discussion Prompt:** What are some unique security challenges of deploying AI models compared to traditional software?
 
-### **Scenario-Based Activity: Deploying AI for Shop Smart**  
+### **Scenario-Based Activity: Deploying AI for Shop Smart**
 
-**Scenario:**  
-Shop Smart, a large retail chain, wants to deploy an AI-powered recommendation engine to improve customer experience and boost sales. The recommendation engine has been trained on customer purchase history, browsing behavior, and demographic data. However, the team is now faced with challenges related to deployment, scalability, and cost management.  
+**Scenario:**
+Shop Smart, a large retail chain, wants to deploy an AI-powered recommendation engine to improve customer experience and boost sales. The recommendation engine has been trained on customer purchase history, browsing behavior, and demographic data. However, the team is now faced with challenges related to deployment, scalability, and cost management.
 
 As consultants for Shop Smart, your task is to guide them through deployment strategies while addressing critical business and technical considerations.
 
@@ -514,16 +526,16 @@ As consultants for Shop Smart, your task is to guide them through deployment str
 
 ### **Discussion Activity Questions**
 
-1. **Deployment Patterns:**  
-   Shop Smart is considering real-time recommendations during checkout (e.g., “Customers who bought this also bought”). Which deployment pattern—Model-as-a-Service, Batch Prediction, or Streaming Model—would you recommend for this use case? What trade-offs should they consider in terms of latency, cost, and complexity?  
+1. **Deployment Patterns:**
+   Shop Smart is considering real-time recommendations during checkout (e.g., “Customers who bought this also bought”). Which deployment pattern—Model-as-a-Service, Batch Prediction, or Streaming Model—would you recommend for this use case? What trade-offs should they consider in terms of latency, cost, and complexity?
 
-2. **Cost Optimization Strategies:**  
+2. **Cost Optimization Strategies:**
    Shop Smart is concerned about rising cloud costs as they scale the recommendation engine across multiple regions. What cost optimization strategies (e.g., using reserved instances, minimizing egress charges, leveraging serverless architectures) would you prioritize to keep costs under control while maintaining performance?
 
-3. **Scalability Considerations:**  
+3. **Scalability Considerations:**
    During holiday sales, customer traffic spikes dramatically. How would you ensure that the AI recommendation engine scales effectively to handle the increased load without crashing or slowing down? Would you prioritize horizontal scaling, auto-scaling, or caching strategies?
 
-4. **Monitoring and Security:**  
+4. **Monitoring and Security:**
    Shop Smart’s leadership is worried about the security of customer data and the risk of model performance degrading over time. What steps would you take to ensure robust security (e.g., encryption, access control) and ongoing monitoring (e.g., data drift detection, A/B testing) of the deployed model?
 
 ## V. Conclusion and Best Practices (5 minutes)
