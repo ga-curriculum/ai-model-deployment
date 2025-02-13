@@ -14,7 +14,7 @@ Let's dive into architectural patterns and best practices for deploying AI model
 | **Embedded Model**          | - Embed the model directly into an application or device.<br>- Suitable for offline or low-latency environments.<br>**Example:** Embedding models in mobile apps or IoT devices. | - Low latency.<br>- Operates offline.<br>- Reduced data transfer costs.   | - Difficult to update.<br>- Limited by device resources.<br>- May require optimization. |
 | **Streaming Model**         | - Process data and generate predictions in real-time.<br>- Ideal for fraud detection, real-time recommendations, and sensor analysis.<br>**Example:** Kafka Streams or Spark Streaming for predictions. | - Low latency.<br>- Enables real-time insights.                           | - Complex to implement.<br>- Requires robust streaming infrastructure. |
 
-    -   **Disadvantages:** Complex to implement, requires robust streaming infrastructure.
+**Disadvantages:** Complex to implement, requires robust streaming infrastructure.
 
 **Discussion Prompt:** What are the trade-offs between these deployment patterns? Which are most suitable for different AI applications?
 
