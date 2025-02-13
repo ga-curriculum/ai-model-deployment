@@ -20,6 +20,16 @@
             "logoUrl": "",
             "microlessons": [
                 {
+                    "friendlyName": "Setup",
+                    "dirName": "setup",
+                    "type": "Content",
+                    "skill": "",
+                    "learningObjective": "",
+                    "videoUrl": "",
+                    "videoLengthInMinutes": 0,
+                    "estimatedDeliveryTimeInMinutes": 5
+                },
+                 {
                     "friendlyName": "Introduction",
                     "dirName": "microlesson-01",
                     "type": "Content",
@@ -30,7 +40,7 @@
                     "estimatedDeliveryTimeInMinutes": 5
                 },
                 {
-                    "friendlyName": "Primer on Hyperscaler Vendor Offerings for AI/ML",
+                    "friendlyName": "Hyperscaler Vendor Offerings",
                     "dirName": "microlesson-02",
                     "type": "Content",
                     "skill": "",
@@ -40,7 +50,7 @@
                     "estimatedDeliveryTimeInMinutes": 25
                 },
                 {
-                    "friendlyName": "Cost & Performance Comparison of Building Data Pipelines",
+                    "friendlyName": "Cost & Performance Comparison",
                     "dirName": "microlesson-03",
                     "type": "Content",
                     "skill": "",
@@ -50,7 +60,7 @@
                     "estimatedDeliveryTimeInMinutes": 25
                 },
                 {
-                    "friendlyName": "Strategies for Scalable AI Deployment",
+                    "friendlyName": "Scalable AI Deployment",
                     "dirName": "microlesson-04",
                     "type": "Content",
                     "skill": "",
