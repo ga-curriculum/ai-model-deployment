@@ -5,42 +5,27 @@ import "https://pages.git.generalassemb.ly/modular-curriculum-all-courses/univer
 setup = new Template.Microlesson {
   friendlyName = "Setup"
   dirName = "setup"
-  type = "Content"
+  type = "Setup"
   videoUrl = ""
 }
 
 microlesson01 = new Template.Microlesson {
-  friendlyName = "Introduction"
+  friendlyName = "Hyperscaler Vendor Offerings"
   dirName = "microlesson-01"
   type = "Content"
   videoUrl = ""
 }
 
 microlesson02 = new Template.Microlesson {
-  friendlyName = "Hyperscaler Vendor Offerings"
+  friendlyName = "Scalable AI Deployment Strategies"
   dirName = "microlesson-02"
   type = "Content"
   videoUrl = ""
 }
 
 microlesson03 = new Template.Microlesson {
-  friendlyName = "Cost & Performance Comparison"
+  friendlyName = "Hands-on Exercise & Best Practices"
   dirName = "microlesson-03"
   type = "Content"
   videoUrl = ""
 }
-
-microlesson04 = new Template.Microlesson {
-  friendlyName = "Scalable AI Deployment"
-  dirName = "microlesson-04"
-  type = "Content"
-  videoUrl = ""
-}
-
-microlesson05 = new Template.Microlesson {
-  friendlyName = "Conclusion and Best Practices"
-  dirName = "microlesson-05"
-  type = "Content"
-  videoUrl = ""
-}
-
