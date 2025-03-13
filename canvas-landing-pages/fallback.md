@@ -1,27 +1,25 @@
-<!-- ! Do not delete or rename this file! -->
 <h1>
   <span class="prefix"></span>
-  <span class="headline">[tktk Headline]</span>
+  <span class="headline">AI Model Deployment</span>
 </h1>
 
-tktk Add some default course navigation content here. This landing page will be used when a student's course cannot be determined, so don't include any course-specific details.
+## About
 
-## Content
+Deploying AI models efficiently is a critical challenge in AI solutions architecture. This module explores the key considerations in AI/ML deployment, including cloud provider offerings, cost-performance trade-offs, and strategies for scalable deployment. By the end of this session, you will be able to:
 
-| Lesson | Est. Delivery Time | Skills |
-| ------ |:------------------:| ------ |
-| [Setup](../setup/README.md)                          | -- | Set up the development environment. |
-| [Concepts](../concepts/README.md)                    | -- | tktk Skills covered.                |
-| [tktk Microlesson Name](../microlesson-01/README.md) | -- | tktk Skills covered.                |
-| **Total content**                                    | -- |                                     |
+- **Compare** the AI/ML deployment options provided by major cloud vendors (AWS, Azure, GCP).
+- **Evaluate** cost and performance trade-offs in different AI deployment strategies.
+- **Apply** best practices to design scalable, reliable, and cost-efficient AI deployments.
 
-## Level Up content
+This module prioritizes **hands-on decision-making and problem-solving** to prepare you for real-world AI deployment challenges.
 
-| Lesson | Est. Delivery Time | Skills |
-| ------ |:------------------:| ------ |
-| [tktk Microlesson Name](../microlesson-02/README.md) | -- | tktk Skills covered. |
-| **Total Level Up content**                           | -- |                      |
+## Content Overview
 
-## References
+| Lesson | Est. Delivery Time | Focus |
+|--------|-------------------|-------|
+| [Setup](./setup/README.md) | 2 min | Set up the development environment |
+| [Hyperscaler Vendor Offerings](../microlesson-01/README.md) | 30 min | Interactive decision-making on AWS, Azure, and GCP AI/ML services |
+| [Scalable AI Deployment Strategies](../microlesson-02/README.md) | 35 min | Discover ways to balancw cost and performance in AI deployments|
+| [Hands-on Exercise & Best Practices](../microlesson-03/README.md) | 20 min | Apply deployment strategies and review key takeaways |
 
-📖 [Reference Materials](../references/README.md)
+**Total Estimated Time: ~90 min**
