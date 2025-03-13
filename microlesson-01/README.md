@@ -1,39 +1,56 @@
 <h1>
   <span class="headline">AI Model Deployment</span>
-  <span class="subhead">Introduction</span>
+  <span class="subhead">Hyperscaler Vendor Offerings</span>
 </h1>
 
-Welcome to "AI Model Deployment: Strategies for Scalable AI Deployment." Building an accurate AI model is only half the battle; deploying it into production for real business value is the crucial other half. 
+## What is a Hyperscaler?
 
-This session focuses on the practical aspects of deploying AI models, particularly leveraging hyperscale cloud providers. We'll explore deployment strategies, compare major cloud vendor offerings, analyze cost and performance of data pipelines for AI, and discuss best practices for achieving scalable, reliable AI deployment. 
+Hyperscalers are large cloud providers that offer scalable, on-demand computing resources across global data centers. These companies—**Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)**—enable enterprises to deploy AI and machine learning (ML) models at scale, leveraging their vast infrastructure and AI-specific services.
 
-Subsequent lessons ("MLOps Fundamentals" and the "MLOps Lab") will build on the architectural and strategic concepts introduced here, diving into the operational aspects and hands-on implementation.
+### Key Characteristics of Hyperscalers:
+- **Global Scalability:** Data centers worldwide ensure low-latency access and redundancy.
+- **On-Demand Resources:** Flexible computing power and storage, billed based on usage.
+- **AI/ML Services:** Pre-built and customizable tools for deploying machine learning models.
+- **Security & Compliance:** Industry-standard security protocols and regulatory compliance (e.g., GDPR, HIPAA).
 
-### A. From Development to Deployment: The Deployment Challenge
+### Where does the need for hyperscalers come from?
 
-Transitioning from model development to deployment presents significant hurdles. Development often happens in isolated environments with limited datasets. Deployment, however, requires:
+<div class="mermaid">
+graph TD;
+    A[Traditional On-Prem Infrastructure] -->|Limited Compute| B[Scalability Issues];
+    A -->|High Maintenance Costs| C[Operational Overhead];
+    B --> D[AI Workload Growth];
+    C --> D;
+    D -->|Demand for Compute| E[Hyperscaler Cloud Model];
+    E -->|On-Demand Resources| F[Scalable AI Deployment];
+    E -->|Distributed Data Centers| G[Global Access & Redundancy];
+    E -->|AI/ML Services| H[Optimized AI Workflows];
+</div>
 
--   **Integration with existing systems:** AI models rarely operate in isolation; they need integration with applications, databases, and data pipelines.
--   **Scalability:** Deployed models must handle large volumes of data and requests, often in real-time.
--   **Reliability:** Models need to be highly available and resilient to failures.
--   **Performance:** Models must meet latency and throughput requirements.
--   **Security:** Deployed models and their data must be protected.
--   **Monitoring and Maintenance:** Models need continuous monitoring for performance degradation and retraining as needed.
+## Comparing AI/ML Offerings
+The three major hyperscalers provide distinct AI/ML deployment options. Below is an overview of their capabilities:
 
-**Failing to address these challenges can lead to AI projects that fail to deliver on their promise, resulting in wasted resources and lost opportunities.**
+| Cloud Provider | AI/ML Deployment Services | Key Strengths | Key Limitations |
+|---------------|--------------------------|---------------|----------------|
+| **AWS** | SageMaker, Lambda for inference, EKS for containerized models | Broadest AI/ML service ecosystem, strong security, global reach | Pricing complexity, potentially expensive for high-compute workloads |
+| **Azure** | Azure Machine Learning, AKS for model hosting, Functions for serverless inference | Strong enterprise integration (Active Directory, DevOps), hybrid cloud capabilities | Less mature AI tooling compared to AWS |
+| **GCP** | Vertex AI, Cloud Run, TensorFlow Serving, TPU accelerators | Best for AI-first workloads, strong model training and scaling capabilities | Fewer enterprise integrations compared to AWS and Azure |
 
-**Discussion Prompt:** How would your current infrastructure handle these deployment considerations?
+## Choosing the Right Cloud Provider
+Each hyperscaler has strengths and trade-offs. The best choice depends on the **business requirements, budget, and performance needs** of the AI solution.
 
-### B. The Role of Hyperscalers
-
-Hyperscale cloud providers like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) simplify and accelerate AI model deployment. They provide:
-
--   **Scalable infrastructure:** On-demand access to vast computing, storage, and networking resources.
--   **Managed services:** Services that handle much of the operational overhead.
--   **Pre-built tools and platforms:** Tools designed for AI/ML workloads, including model training, deployment, and monitoring.
--   **Global reach:** Deployment across multiple regions, reducing latency.
--   **Security and compliance:** Robust security features and compliance certifications.
-
-**Leveraging hyperscalers can significantly reduce the time, cost, and complexity of deploying AI models.**
+- **Cost vs. Performance:** Does the project prioritize cost savings, or is high performance essential?
+- **Integration Needs:** Does the company already use a particular cloud provider for other services?
+- **Scalability:** Will the model need to handle fluctuating or high-demand workloads?
+- **Security & Compliance:** Does the organization operate in a highly regulated industry (e.g., finance, healthcare)?
 
 
+## Hyperscaler Decision-Making Activity
+
+In this scenario based discussion activity you will:
+
+- Apply your knowledge to a real-world consulting scenario
+- Use the [Hyperscaler Decision-Making Activity Worksheet](Decision_Making_Activity.pdf) to evaluate a case study and select the best cloud provider
+- Discuss trade-offs and justify your recommendation with peers.
+
+Be prepared to discuss your descisions with the class when we return from breakout rooms!
