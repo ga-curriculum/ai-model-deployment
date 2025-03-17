@@ -28,6 +28,7 @@ graph TD;
 </div>
 
 ## Comparing AI/ML Offerings
+
 The three major hyperscalers provide distinct AI/ML deployment options. Below is an overview of their capabilities:
 
 | Cloud Provider | AI/ML Deployment Services | Key Strengths | Key Limitations |
