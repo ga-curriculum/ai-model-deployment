@@ -64,7 +64,7 @@ print("MLflow run completed.")
 Open a new terminal and run this command.
 
 ```bash
-sudo docker exec -d -w /app sa-course-labs mlflow models serve -m ./sklearn_iris_model_local --port 5001 --no-conda
+sudo docker exec -it -w /app sa-course-labs mlflow models serve -m ./sklearn_iris_model_local --port 5001 --no-conda
 ```
 
 This will launch a REST API that can be used to make predictions.
