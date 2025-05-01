@@ -99,6 +99,8 @@ except Exception as e:
     print(f"An unexpected error occurred: {e}")
 ```
 
+### **Step 4: Stop the terminal opened on step 2 with Ctrl-C
+
 ---
 
 ## Best Practices Recap
