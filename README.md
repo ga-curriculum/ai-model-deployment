@@ -19,7 +19,7 @@ This module prioritizes **hands-on decision-making and problem-solving** to prep
 |--------|-------------------|-------|
 | [Setup](./setup/README.md) | 2 min | Set up the development environment |
 | [Hyperscaler Vendor Offerings](./microlesson-01/README.md) | 30 min | Interactive decision-making on AWS, Azure, and GCP AI/ML services |
-| [Scalable AI Deployment Strategies](./microlesson-02/README.md) | 35 min | Discover ways to balancw cost and performance in AI deployments|
+| [Scalable AI Deployment Strategies](./microlesson-02/README.md) | 35 min | Discover ways to balance cost and performance in AI deployments|
 | [Hands-on Exercise & Best Practices](./microlesson-03/README.md) | 20 min | Apply deployment strategies and review key takeaways |
 
 **Total Estimated Time: ~90 min**
