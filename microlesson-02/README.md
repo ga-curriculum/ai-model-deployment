@@ -6,10 +6,10 @@
 # Scalable AI Deployment Strategies
 
 ## Cost Considerations in AI Deployment
-Efficient AI deployment requires balancing cost and performance. Cloud costs are primarily influenced by:
+Efficient AI deployment requires balancing cost, performance, and scalability. In cloud environments, deployment costs are primarily influenced by:
 
 - **Compute:** GPU, TPU, or CPU resources required for inference.
-- **Storage:** Model size, data retention, and real-time access needs.
+- **Storage:** Model artifacts, data retention policies, and access patterns.
 - **Networking:** Data transfer between cloud services and external endpoints.
 - **Operational Scaling:** Autoscaling policies, serverless pricing, and reserved instances.
 
@@ -31,7 +31,7 @@ graph TD;
     A[**AI Deployment Strategy**] -->|Does the model require immediate responses?| B[Real-Time Inference];
     A -->|Can the model run in scheduled batches?| C[Batch Inference];
     B -->|Does the system need to scale dynamically?| D[Autoscaling API Deployment];
-    B -->|Is cost a higher priority than speed?| E[Serverless AI Deployment];
+    B -->|Is cost efficiency a higher priority than low latency?  | E[Serverless AI Deployment];
     C -->|Is the batch size large and requires parallelization?| F[Distributed Batch Processing];
     C -->|Are predictions needed at specific intervals?| G[Scheduled Jobs];
 </div>
@@ -83,5 +83,5 @@ print("Sample Cost Estimate:", data['price'])
 ***Think about it**: How do different instance types affect cost-performance trade-offs?*
 
 ## Key Takeaway
-By understanding **cost optimization, scalable deployment strategies, and benchmarking AI performance**, you can design AI architectures that balance cost, performance, and operational complexity.
+By understanding **cost optimization, scalable deployment strategies, and benchmarking AI performance**, you can design AI architectures that balance latency, cost efficiency, and operational complexity.
 
